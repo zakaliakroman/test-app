@@ -42,7 +42,7 @@ npm run dev
 
 | Service | URL |
 |---|---|
-| Frontend | http://localhost:3000 |
+| Frontend | http://localhost:5173 |
 | Backend | http://localhost:3001 |
 
 Or individually:
@@ -61,7 +61,7 @@ npm run dev:backend
 ```env
 DATABASE_URL=file:./prisma/dev.db
 PORT=3001
-CORS_ORIGIN=http://localhost:3000
+CORS_ORIGIN=http://localhost:5173
 ```
 
 ### `frontend/.env
@@ -82,8 +82,6 @@ DELETE /todos/:id
 GET    /categories
 GET    /health
 ```
-
-Business rule: max **5 todos per category** — enforced by the service layer, returns `400` with a message on violation.
 
 ---
 
