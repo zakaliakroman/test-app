@@ -1,14 +1,14 @@
-import {
-  fetchTodos,
-  countTodosByCategory,
-  insertTodo,
-  patchTodo,
-  removeTodo,
-  type TodoWithCategory,
-} from "../repositories/todos.repository.js";
 import { failure, Result, success } from "../utils/result.utils.js";
 import type { ServiceError } from "../types/service-error.type.js";
 import { HttpStatus } from "../types/enums/http-status.enum.js";
+import {
+  countTodosByCategory,
+  fetchTodos,
+  insertTodo,
+  patchTodo,
+  removeTodo,
+  TodoWithCategory,
+} from "../repos/todos.repository.js";
 
 const MAX_TASKS_PER_CATEGORY = 5;
 

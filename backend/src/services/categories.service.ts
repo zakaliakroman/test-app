@@ -1,8 +1,9 @@
 import { Category } from "../../generated/prisma/client.js";
-import { fetchCategories } from "../repositories/categories.repository.js";
+
 import { failure, Result, success } from "../utils/result.utils.js";
 import type { ServiceError } from "../types/service-error.type.js";
 import { HttpStatus } from "../types/enums/http-status.enum.js";
+import { fetchCategories } from "../repos/categories.repository.js";
 
 // Using HTTP status code is not a best practice in service layer
 // but for simplicity we are using it here
